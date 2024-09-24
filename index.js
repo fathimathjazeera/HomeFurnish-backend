@@ -3,6 +3,7 @@ import { configDotenv } from 'dotenv';
 import cors from 'cors'
 import userRoute from './routes/user.js';
 import connectDb from './config/db.js';
+import adminRoute from './routes/admin.js';
 configDotenv();
 
 const app = express();
@@ -11,7 +12,7 @@ const db_url = process.env.DATABASE_URL;
 
 app.use(cors())
 app.use(express.json())
-app.use('/api',userRoute)
+app.use('/api',userRoute,adminRoute)
 
 
 

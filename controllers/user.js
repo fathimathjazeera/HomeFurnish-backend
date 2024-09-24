@@ -1,6 +1,8 @@
 import userModel from '../models/user.js';
 import bcrypt from 'bcrypt';
 import { generateAccessToken } from '../utils/generateToken.js';
+
+
 export const register = async (req, res) => {
   const { name, email, password } = req.body;
   console.log(name, email, password, 'reqbody');

@@ -7,6 +7,7 @@ const categorySchema = new mongoose.Schema({
   description:String,
   price: Number,
   category: String,
+  timestamps:true
 });
 
 
