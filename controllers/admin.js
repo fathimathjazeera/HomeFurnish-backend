@@ -12,8 +12,9 @@ return res.status(201).json({
     status:'success',
     message:'successfully created product'
 })
-
 }
+
+
 
 export const getAllProducts= async(req,res)=>{
     const allProducts= await categoryModel.find({})
@@ -34,6 +35,7 @@ export const getAProduct= async(req,res)=>{
         data:singleProduct
     })
 }
+
 
 export const updateProduct = async(req,res)=>{
     const {id}= req.params
